@@ -1,5 +1,6 @@
 import { MutableRefObject, useEffect, useRef } from 'react';
-import { BrowserQRCodeReader, IScannerControls } from '@zxing/browser';
+import { BrowserMultiFormatReader , IScannerControls,BarcodeFormat } from '@zxing/browser';
+import {DecodeHintType}from '@zxing/library'
 
 import { UseQrReaderHook } from '../types';
 
@@ -13,11 +14,12 @@ export const useQrReader: UseQrReaderHook = ({
   videoId,
 }) => {
   const controlsRef: MutableRefObject<IScannerControls> = useRef(null);
-
+  const hints = new Map();
+  const formats = [BarcodeFormat.CODE_93/*, ...*/];
+  
+  hints.set(DecodeHintType.POSSIBLE_FORMATS, formats);
   useEffect(() => {
-    const codeReader = new BrowserQRCodeReader(null, {
-      delayBetweenScanAttempts,
-    });
+    const codeReader = new BrowserMultiFormatReader (hints,{delayBetweenScanAttempts});
 
     if (
       !isMediaDevicesSupported() &&
