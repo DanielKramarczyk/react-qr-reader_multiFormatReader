@@ -11,14 +11,12 @@ export const QrReader: React.FC<QrReaderProps> = ({
   videoStyle,
   constraints,
   ViewFinder,
-  scanDelay,
   className,
   onResult,
   videoId,
 }) => {
   useQrReader({
     constraints,
-    scanDelay,
     onResult,
     videoId,
   });
@@ -49,8 +47,7 @@ export const QrReader: React.FC<QrReaderProps> = ({
 QrReader.displayName = 'QrReader';
 QrReader.defaultProps = {
   constraints: {
-    facingMode: 'user',
+    facingMode: 'environment',
   },
   videoId: 'video',
-  scanDelay: 500,
 };

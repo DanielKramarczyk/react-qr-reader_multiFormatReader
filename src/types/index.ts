@@ -1,4 +1,4 @@
-import { BrowserQRCodeReader } from '@zxing/browser';
+import { BrowserMultiFormatReader } from '@zxing/browser';
 import { Result } from '@zxing/library';
 
 export type QrReaderProps = {
@@ -14,10 +14,6 @@ export type QrReaderProps = {
    * Property that represents the view finder component
    */
   ViewFinder?: (props: any) => React.ReactElement<any, any> | null;
-  /**
-   * Property that represents the scan period
-   */
-  scanDelay?: number;
   /**
    * Property that represents the ID of the video element
    */
@@ -52,7 +48,7 @@ export type OnResultFunction = (
   /**
    * The instance of the QR browser reader
    */
-  codeReader?: BrowserQRCodeReader
+  codeReader?: BrowserMultiFormatReader
 ) => void;
 
 export type UseQrReaderHookProps = {
@@ -64,10 +60,6 @@ export type UseQrReaderHookProps = {
    * Callback for retrieving the result
    */
   onResult?: OnResultFunction;
-  /**
-   * Property that represents the scan period
-   */
-  scanDelay?: number;
   /**
    * Property that represents the ID of the video element
    */

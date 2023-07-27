@@ -1,6 +1,5 @@
 import { MutableRefObject, useEffect, useRef } from 'react';
-import { BrowserMultiFormatReader , IScannerControls,BarcodeFormat } from '@zxing/browser';
-import {DecodeHintType}from '@zxing/library'
+import { BrowserMultiFormatReader , IScannerControls } from '@zxing/browser';
 
 import { UseQrReaderHook } from '../types';
 
@@ -8,18 +7,14 @@ import { isMediaDevicesSupported, isValidType } from './utils';
 
 // TODO: add support for debug logs
 export const useQrReader: UseQrReaderHook = ({
-  scanDelay: delayBetweenScanAttempts,
   constraints: video,
   onResult,
   videoId,
 }) => {
   const controlsRef: MutableRefObject<IScannerControls> = useRef(null);
-  const hints = new Map();
-  const formats = [BarcodeFormat.CODE_93/*, ...*/];
-  
-  hints.set(DecodeHintType.POSSIBLE_FORMATS, formats);
+ 
   useEffect(() => {
-    const codeReader = new BrowserMultiFormatReader (hints,{delayBetweenScanAttempts});
+    const codeReader = new BrowserMultiFormatReader ();
 
     if (
       !isMediaDevicesSupported() &&
