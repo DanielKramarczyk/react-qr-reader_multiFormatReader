@@ -1,24 +1,22 @@
-# React QR Reader [![npm version](https://badge.fury.io/js/react-qr-reader.svg)](https://badge.fury.io/js/react-qr-reader) [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) [![Known Vulnerabilities](https://snyk.io/test/github/react-qr-reader/react-qr-reader/badge.svg)](https://snyk.io/test/github/react-qr-reader/react-qr-reader)
+# React QR Reader MultiFormatReader
 
-:rocket: React QR Reader component. Check out the [demo](https://react-qr-reader.github.io/react-qr-reader/).
+**Attention!!!!**
+
+This repository and library is fork from here https://github.com/JodusNodus/react-qr-reader
 
 ## Table of contents
 
 - [Use Case](#use-case)
 - [Compatibility](#compatibility)
-- [Installation](#installation)
-  - [NPM](#npm)
-  - [YARN](#yarn)
 - [Example Usage](#example-usage)
 - [QrReader API](#component-api)
-- [Browser support](#browser-support)
-- [Issues](#issues)
-- [Contributing](#contributing)
+- [Maintainers](#maintainers)
 - [License](#license)
 
 ## Use Case
 
-You need a component for Scanning QR codes from a web browser based app.
+You need a component for Scanning QR codes and Barcodes from a web browser based app.
+This project uses the zxing library with all its supported formats. (See https://github.com/zxing/zxing)
 
 ## Compatibility
 
@@ -30,21 +28,6 @@ This component has been tested in the following browsers:
 
 Since this library does internal use of hooks you need `React >= 16.8.0`.
 
-## Installation
-
-You can install this library via NPM or YARN.
-
-### NPM
-
-```bash
-npm i react-qr-reader
-```
-
-### YARN
-
-```bash
-yarn add react-qr-reader
-```
 
 ## Example Usage
 
@@ -81,35 +64,45 @@ const Test = (props) => {
 
 The `QrReader` component has the following props:
 
-| Properties          | Types                                                                                           | Default Value            | Description                                              |
-| ------------------- | ----------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------------- |
-| constraints         | [MediaTrackConstraints](https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints) | `{ facingMode: 'user' }` | Specify which camera should be used (if available).      |
-| onResult            | `function`                                                                                      | none                     | Scan event handler                                       |
-| videoId             | `string`                                                                                        | `video`                  | The ID for the video element                             |
-| scanDelay           | `number`                                                                                        | `500`                    | The scan period for the QR hook                          |
-| ViewFinder          | component                                                                                       | none                     | ViewFinder component to rendering over the video element |
-| className           | string                                                                                          | none                     | ClassName for the container element.                     |
-| containerStyle      | object                                                                                          | none                     | Style object for the container element.                  |
-| videoContainerStyle | object                                                                                          | none                     | Style object for the video container element.            |
-| videoStyle          | object                                                                                          | none                     | Style object for the video element.                      |
+| Properties          | Types                                                                                           | Default Value                   | Description                                              |
+| ------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------- | -------------------------------------------------------- |
+| constraints         | [MediaTrackConstraints](https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints) | `{ facingMode: 'environment' }` | Specify which camera should be used (if available).      |
+| onResult            | `function`                                                                                      | none                            | Scan event handler                                       |
+| videoId             | `string`                                                                                        | `video`                         | The ID for the video element                             |
+| ViewFinder          | component                                                                                       | none                            | ViewFinder component to rendering over the video element |
+| className           | string                                                                                          | none                            | ClassName for the container element.                     |
+| containerStyle      | object                                                                                          | none                            | Style object for the container element.                  |
+| videoContainerStyle | object                                                                                          | none                            | Style object for the video container element.            |
+| videoStyle          | object                                                                                          | none                            | Style object for the video element.                      |
 
 ## Maintainers
 
-- Created by [@JodusNodus](https://github.com/JodusNodus) .
-- Revived thanks to [@JonatanSalas](https://github.com/JonatanSalas) and his company [@BlackBoxVision](https://github.com/BlackBoxVision) .
+- Current Maintainers [@DanielKramarczyk](https://github.com/DanielKramarczyk)
 
-## Browser Support
 
-If you need to support older browsers, checkout [this guide](https://github.com/zxing-js/library#browser-support) in how to make it compatible with legacy ones
+- Original Author [@JodusNodus](https://github.com/JodusNodus)
 
-## Issues
-
-Please, open an [issue](https://github.com/react-qr-reader/react-qr-reader/issues) following one of the issues templates. We will do our best to fix them.
-
-## Contributing
-
-If you want to contribute to this project see [contributing](https://github.com/react-qr-reader/react-qr-reader/blob/master/CONTRIBUTING.md) for more information.
 
 ## License
 
-Distributed under the **MIT license**. See [LICENSE](https://github.com/react-qr-reader/react-qr-reader/blob/master/LICENSE) for more information.
+The MIT License (MIT)
+
+Copyright (c) 2018 Thomas Billiet
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
