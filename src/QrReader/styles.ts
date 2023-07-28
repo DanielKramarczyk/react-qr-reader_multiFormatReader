@@ -14,5 +14,6 @@ export const styles: any = {
     overflow: 'hidden',
     position: 'absolute',
     transform: undefined,
+    objectFit: 'cover',
   },
 };

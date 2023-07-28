@@ -28,9 +28,9 @@ export const useQrReader: UseQrReaderHook = ({
 
     if (isValidType(video, 'constraints', 'object')) {
       codeReader
-        .decodeFromConstraints({ video }, videoId, (result, error) => {
+        .decodeFromConstraints({ video }, videoId, (result) => {
           if (isValidType(onResult, 'onResult', 'function')) {
-            onResult(result, error, codeReader);
+            onResult(result, null, codeReader);
           }
         })
         .then((controls: IScannerControls) => (controlsRef.current = controls))
