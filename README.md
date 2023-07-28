@@ -35,7 +35,7 @@ After reading and performing the previous steps, you should be able to import th
 
 ```javascript
 import React, { useState } from 'react';
-import { QrReader } from 'react-qr-reader';
+import { QrReader } from 'react-qr-reader_multiformatreader';
 
 const Test = (props) => {
   const [data, setData] = useState('No result');
