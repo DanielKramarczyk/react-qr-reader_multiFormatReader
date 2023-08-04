@@ -42,6 +42,7 @@ export const ScanCode = Template.bind({});
 ScanCode.args = {
   ViewFinder,
   videoId: 'video',
+  scanDelay: 500,
   constraints: {
     facingMode: 'environment',
   },

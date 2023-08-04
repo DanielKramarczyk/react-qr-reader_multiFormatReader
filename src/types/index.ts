@@ -15,6 +15,10 @@ export type QrReaderProps = {
    */
   ViewFinder?: (props: any) => React.ReactElement<any, any> | null;
   /**
+   * Property that represents the scan period
+   */
+  scanDelay?: number;
+  /**
    * Property that represents the ID of the video element
    */
   videoId?: string;
@@ -52,6 +56,10 @@ export type OnResultFunction = (
 ) => void;
 
 export type UseQrReaderHookProps = {
+   /**
+   * Property that represents the scan period
+   */
+   scanDelay?: number;
   /**
    * Media constraints object, to specify which camera and capabilities to use
    */
