@@ -1,6 +1,6 @@
 {
   "name": "react-qr-reader_multiformatreader",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A React Component for reading QR codes and Barcodes from the webcam",
   "scripts": {
     "build": "rollup -c",
@@ -15,7 +15,7 @@
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DanielKramarczyk/react-qr-reader_multiFormatReader.git"
+    "url": "git+https://github.com/ivansazdovski/react-qr-reader_multiFormatReader.git"
   },
   "keywords": [
     "react",
@@ -26,7 +26,7 @@
   ],
   "author": "thomas billiet",
   "license": "MIT",
-  "homepage": "https://github.com/DanielKramarczyk/react-qr-reader_multiFormatReader#readme",
+  "homepage": "https://github.com/ivansazdovski/react-qr-reader_multiFormatReader#readme",
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0"

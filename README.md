@@ -28,7 +28,6 @@ This component has been tested in the following browsers:
 
 Since this library does internal use of hooks you need `React >= 16.8.0`.
 
-
 ## Example Usage
 
 After reading and performing the previous steps, you should be able to import the library and use it like in this example:
@@ -64,7 +63,6 @@ const Test = (props) => {
 
 The `QrReader` component has the following props:
 
-
 | Properties          | Types                                                                                           | Default Value                   | Description                                              |
 | ------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------- | -------------------------------------------------------- |
 | constraints         | [MediaTrackConstraints](https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints) | `{ facingMode: 'environment' }` | Specify which camera should be used (if available).      |
@@ -77,14 +75,21 @@ The `QrReader` component has the following props:
 | videoContainerStyle | object                                                                                          | none                            | Style object for the video container element.            |
 | videoStyle          | object                                                                                          | none                            | Style object for the video element.                      |
 
-
 ## Maintainers
 
-- Current Maintainers [@DanielKramarczyk](https://github.com/DanielKramarczyk)
-
+- Current Maintainers [@ivansazdovski](https://github.com/ivansazdovski)
 
 - Original Author [@JodusNodus](https://github.com/JodusNodus)
 
+## Work on repository
+
+Node.js <= v16.
+yarn install
+yarn run storybook
+check it on phone on same network with https:
+
+- generate certificate: openssl req -x509 -sha256 -nodes -newkey rsa:2048 -days 365 -keyout localhost.key -out localhost.crt
+- run storybook: yarn start-storybook -p 6006 --https --ssl-cert ./localhost.crt --ssl-key ./localhost.key
 
 ## License
 
