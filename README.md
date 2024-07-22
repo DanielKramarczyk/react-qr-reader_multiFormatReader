@@ -77,7 +77,7 @@ The `QrReader` component has the following props:
 
 ## Maintainers
 
-- Current Maintainers [@ivansazdovski](https://github.com/ivansazdovski)
+- Current Maintainers [@MMischke1892](https://github.com/MMischke1892)
 
 - Original Author [@JodusNodus](https://github.com/JodusNodus)
 
