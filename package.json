@@ -1,6 +1,6 @@
 {
   "name": "react-qr-reader_multiformatreader",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A React Component for reading QR codes and Barcodes from the webcam",
   "scripts": {
     "build": "rollup -c",
